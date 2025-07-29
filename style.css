@@ -1,0 +1,207 @@
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    background: linear-gradient(45deg, #ff4d4d, #4d4dff, #4dff4d, #ffff4d);
+
+    background-size: 400%;
+
+    animation: colorShift 5s infinite;
+
+    font-family: Arial, sans-serif;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 100vh;
+
+}
+
+.container {
+
+    width: 300px;
+
+    min-height: 400px;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    padding: 10px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+
+    text-align: center;
+
+}
+
+h1#title {
+
+    font-size: 18px;
+
+    color: magenta;
+
+    text-shadow: 0 0 15px magenta, 0 0 30px magenta;
+
+    margin: 5px 0;
+
+    animation: pulse 1.5s infinite;
+
+}
+
+h2#score {
+
+    font-size: 16px;
+
+    color: cyan;
+
+    text-shadow: 0 0 10px cyan;
+
+    margin: 5px 0;
+
+}
+
+label {
+
+    font-size: 14px;
+
+    color: yellow;
+
+    text-shadow: 0 0 5px yellow;
+
+}
+
+input {
+
+    width: 80%;
+
+    padding: 5px;
+
+    margin: 5px 0;
+
+    background: #333366;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+
+}
+
+button {
+
+    padding: 8px 15px;
+
+    margin: 5px;
+
+    background: #00ccff;
+
+    color: black;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: all 0.3s;
+
+}
+
+button:hover {
+
+    background: #ff66b3;
+
+    color: white;
+
+    box-shadow: 0 0 10px #ff66b3;
+
+}
+
+p#question {
+
+    font-size: 14px;
+
+    color: lime;
+
+    animation: pulse 1s infinite;
+
+    margin: 10px 0;
+
+}
+
+p#result {
+
+    font-size: 14px;
+
+    color: white;
+
+    margin: 10px 0;
+
+}
+
+#leaderboard {
+
+    font-size: 12px;
+
+    color: cyan;
+
+    text-shadow: 0 0 5px cyan;
+
+    margin-top: 10px;
+
+}
+
+@keyframes colorShift {
+
+    0% { background-position: 0% 50%; }
+
+    50% { background-position: 100% 50%; }
+
+    100% { background-position: 0% 50%; }
+
+}
+
+@keyframes pulse {
+
+    0% { transform: scale(1); }
+
+    50% { transform: scale(1.05); }
+
+    100% { transform: scale(1); }
+
+}
+
+.flash-correct { animation: flashCorrect 0.5s 3; }
+
+.flash-wrong { animation: flashWrong 0.5s 3; }
+
+@keyframes flashCorrect {
+
+    0%, 100% { color: white; }
+
+    50% { color: cyan; text-shadow: 0 0 10px cyan; }
+
+}
+
+@keyframes flashWrong {
+
+    0%, 100% { color: white; }
+
+    50% { color: red; text-shadow: 0 0 10px red; }
+
+}
